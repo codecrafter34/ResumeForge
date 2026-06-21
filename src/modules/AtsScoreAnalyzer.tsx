@@ -48,17 +48,17 @@ export function AtsScoreAnalyzer() {
           <p className="text-sm text-muted-foreground mt-1">Paste your resume content to see how well it passes ATS filters.</p>
         </div>
 
-        <form onSubmit={handleGenerate} className="flex-1 space-y-5">
-          <div className="space-y-2 h-[60%]">
+        <form onSubmit={handleGenerate} className="flex-1 flex flex-col gap-5">
+          <div className="flex-1 flex flex-col gap-2">
             <label className="text-sm font-medium">Resume Content <span className="text-red-500">*</span></label>
             <textarea 
               value={resumeText} onChange={(e) => setResumeText(e.target.value)}
               placeholder="Paste your entire resume text here..." required
-              className="w-full h-[250px] rounded-lg border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+              className="w-full flex-1 min-h-[250px] rounded-lg border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
             />
           </div>
 
-          <div className="flex gap-3 pt-4 mt-auto">
+          <div className="flex gap-3 mt-auto">
             <button
               type="submit" disabled={isGenerating || !resumeText}
               className="flex-1 bg-foreground text-background font-medium py-2.5 rounded-lg flex items-center justify-center gap-2 hover:bg-foreground/90 disabled:opacity-50 transition-all shadow-sm"

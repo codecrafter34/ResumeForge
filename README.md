@@ -1,90 +1,79 @@
-# ResumeForge
+# ResumeForge AI
 
-ResumeForge is a free online tool that helps students create ATS-friendly resume content quickly. Built with Next.js, TypeScript, and Tailwind CSS.
+Build ATS-Friendly Resume Content in Seconds. ResumeForge AI is a free online tool that helps students, job seekers, and developers create professional ATS-friendly resume content quickly and efficiently.
 
 ## Features
 
-- **Resume Bullet Generator**: Generate professional, action-oriented resume bullet points, extract ATS keywords, and craft project summaries based on your project details and technologies.
-- **Resume Summary Generator**: Craft a compelling professional summary highlighting your skills, experience level, and career goals.
-- **Copy to Clipboard**: One-click copying for generated content.
-- **Modern & Responsive UI**: Clean, mobile-friendly design ensuring accessibility and ease of use.
+1. **Resume Bullet Generator**: Generate 5 ATS-Friendly Resume Bullet Points, Quantified Impact Statements, and Professional Project Summaries.
+2. **ATS Keyword Generator**: Extract top hard/soft skills and industry tools based on a target role.
+3. **Resume Summary Generator**: Create optimized professional summaries for Fresher, Entry, Mid, and Senior levels based on core skills.
+4. **Resume Bullet Enhancer**: Transform basic bullet points into high-impact, quantified ATS power statements.
+5. **Action Verb Generator**: Replace weak words (e.g., "Worked", "Made") with strong action verbs.
+6. **ATS Score Analyzer**: Paste your resume text to receive an ATS compatibility score and actionable suggestions.
+7. **Download & Export**: One-click copy functionality and PDF export (using jsPDF) for generated bullets and summaries.
+8. **History**: Easily retain active sessions during your visit.
+9. **Quick Templates**: Access ready-to-use, ATS-optimized project descriptions.
 
-## Folder Structure
+## Tech Stack
 
-```
-resumeforge/
-├── src/
-│   ├── app/
-│   │   ├── about/
-│   │   │   └── page.tsx        # About page
-│   │   ├── api/
-│   │   │   └── generate/
-│   │   │       └── route.ts    # Mock API route for generation logic
-│   │   ├── globals.css         # Global Tailwind styles
-│   │   ├── layout.tsx          # Root layout with Header and Footer
-│   │   └── page.tsx            # Home page containing the generators
-│   └── components/
-│       ├── Footer.tsx          # Global Footer
-│       ├── Header.tsx          # Global Header Navigation
-│       ├── ResumeBulletGenerator.tsx   # Bullet Generator Component
-│       └── ResumeSummaryGenerator.tsx  # Summary Generator Component
-├── public/                     # Static assets
-├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
-```
+- **Framework**: React + Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **PDF Generation**: jsPDF
 
-## Local Development Setup
+## Local Development
 
-1. **Clone the repository**:
-   ```bash
-   git clone <your-repo-url>
-   cd resumeforge
-   ```
-
-2. **Install dependencies**:
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Run the development server**:
+2. Start the development server:
    ```bash
    npm run dev
    ```
 
-4. **Open your browser**:
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+3. Build for production:
+   ```bash
+   npm run build
+   ```
 
 ## GitHub Setup Steps
 
-1. Create a new empty repository on GitHub.
-2. Initialize Git in your local project directory (if not already initialized):
+To push this project to your own GitHub repository:
+
+1. Initialize a Git repository (if not already initialized):
    ```bash
    git init
    git add .
    git commit -m "Initial commit"
    ```
-3. Link your local repository to GitHub:
+
+2. Create a new repository on GitHub (leave it completely empty, without a README or .gitignore).
+
+3. Link your local repository to GitHub and push:
    ```bash
-   git remote add origin https://github.com/your-username/resumeforge.git
    git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/resumeforge-ai.git
    git push -u origin main
    ```
 
 ## Vercel Deployment Steps
 
-ResumeForge is optimized for seamless deployment on Vercel.
+This project is optimized for deployment on the Vercel Free Plan.
 
 1. Create a free account at [Vercel](https://vercel.com).
-2. Click on **Add New...** > **Project**.
-3. Import your GitHub repository for `resumeforge`.
-4. Vercel will automatically detect the Next.js framework. Leave the default build settings:
-   - Build Command: `npm run build`
-   - Output Directory: `.next`
-   - Install Command: `npm install`
-5. Click **Deploy**. Vercel will build and deploy your app.
-6. Once deployed, you will receive a production URL.
+2. From the Vercel dashboard, click **"Add New"** -> **"Project"**.
+3. Import your `resumeforge-ai` GitHub repository.
+4. Vercel will automatically detect the **Vite** framework.
+5. Leave the Build and Output Settings as default:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+   - **Install Command**: `npm install`
+6. Click **Deploy**. Your premium web app will be live in seconds!
 
-## Future Enhancements
-- Connect the `/api/generate` route to a real AI provider (like OpenAI or Gemini) by adding an API Key in `.env.local` and replacing the mock logic.
+## Built for Digital Heroes
+
+[https://digitalheroesco.com](https://digitalheroesco.com)
